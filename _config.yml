@@ -13,6 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+locale: en-US
+url: https://treetoplover.github.io
 title: Treetop's CHANGELOG
 email: joseph.henry.hargrove@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -21,6 +23,8 @@ twitter_username: OldJoeHenry
 github_username: TreetopLover
 minimal_mistakes_skin: dirt
 search: true
+#logo: https://treetoplover.github.io/assets/images/cardlogo.svg
+repository: TreetopLover/treetoplover.github.io
 
 # Build settings
 markdown: kramdown
@@ -29,7 +33,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Chicago
 
 include:
   - _pages
@@ -58,11 +62,17 @@ plugins:
 author:
   name   : "Joseph Henry Hargrove"
   avatar : "/assets/images/IMG_20190413_152613.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Retired Culinary Gunslinger -
+            Twin Dad -
+            Web Developer -
+            Writer -"
   links:
     - #label: "Website"
       #icon: "fas fa-fw fa-link"
       #url: "https://"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:joseph.henry.hargrove@gmail.com"  
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/OldJoeHenry"
