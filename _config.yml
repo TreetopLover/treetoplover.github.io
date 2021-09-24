@@ -23,7 +23,7 @@ twitter_username: OldJoeHenry
 github_username: TreetopLover
 minimal_mistakes_skin: dirt
 search: true
-logo: https://treetoplover.github.io/assets/images/cardlogo.svg
+#logo: https://treetoplover.github.io/assets/images/cardlogo.svg
 repository: TreetopLover/treetoplover.github.io
 
 # Build settings
