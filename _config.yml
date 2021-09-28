@@ -16,7 +16,7 @@
 locale: en-US
 url: https://treetoplover.github.io
 title: Treetop's CHANGELOG
-email:    {{ 'joseph.henry.hargrove@gmail.com' | encode_email }}
+email: "joseph.henry.hargrove@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   A personal blog and portfolio.
 twitter_username: OldJoeHenry
@@ -76,7 +76,7 @@ author:
       #url: "https://"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url:   {{ 'joseph.henry.hargrove@gmail.com' | encode_email }}
+      url:  "joseph.henry.hargrove@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/OldJoeHenry"
