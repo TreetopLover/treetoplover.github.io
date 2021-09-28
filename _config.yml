@@ -16,9 +16,9 @@
 locale: en-US
 url: https://treetoplover.github.io
 title: Treetop's CHANGELOG
-email: joseph.henry.hargrove@gmail.com
+email:    {{ 'joseph.henry.hargrove@gmail.com' | encode_email }}
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal blog and portfolio.
+  A personal blog and portfolio.
 twitter_username: OldJoeHenry
 github_username: TreetopLover
 minimal_mistakes_skin: dirt
@@ -61,6 +61,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-email-protect
 
 author:
   name   : "Joseph Henry Hargrove"
@@ -75,7 +76,7 @@ author:
       #url: "https://"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:joseph.henry.hargrove@gmail.com"  
+      url:   {{ 'joseph.henry.hargrove@gmail.com' | encode_email }}
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/OldJoeHenry"
