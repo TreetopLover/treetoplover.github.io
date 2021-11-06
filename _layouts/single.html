@@ -29,7 +29,7 @@ layout: default
     {%- if page.image -%}
       <img src="{{- page.image | relative_url -}}" alt="" class="featured-image">
     {%- else -%}
-      {%- assign postImage = "/assets/images/image-default.jpg" -%}
+      {%- assign postImage = "/assets/images/default.jpg" -%}
       <img src="{{- postImage | relative_url -}}" alt="" class="featured-image">
     {%- endif -%}
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}

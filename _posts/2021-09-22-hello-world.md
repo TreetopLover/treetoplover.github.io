@@ -3,10 +3,11 @@ layout: single
 title: "Welcome to Treetop's CHANGELOG!"
 description: "Just a friendly introduction to myself and my home on the web."
 tags: welcome hello world
+image: /assets/images/personal.jpg
 ---
-Hello World!  
+*Hello World!*  
 
-That's what I'm supposed to say here right? My first real attempt at a home on the web. Not including that slice of static masterpiece on the back of www.auburn.edu in the late nineties known as *Bert's Chili*. It was a fine product. Probably a member of several quality webrings. Who could remember?  
+That's what I'm supposed to say here right? My first real attempt at a home on the web. Not including that slice of static masterpiece on the back pages of www.auburn.edu in the late nineties known as *Bert's Chili*. It was a fine product. Probably a member of several quality webrings. Who could remember?  
 
 But now I'm back. Twenty odd years gone by. I did spend some time working for the Division of University Computing through the co-op program. I got to watch the tech bubble bust as I was failing Differential Equations. I changed majors twice before I dropped out. I never had a real idea of why I was at college. It wasn't the coursework that washed me out, although I did bounce off of Physics pretty hard. Calculus is bad enough without making it into a word problem. Computer Engineering was a pretty bold choice for me. Based on my early intro to BASIC with the C64 my uncle gave us, and some idea that it was a sure fire paycheck... Either way, my heart wasn't in it. Nor my head.  
 
