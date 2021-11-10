@@ -27,7 +27,7 @@ layout: default
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     {%- if page.image -%}
-      <img src="{{- page.image | relative_url -}}" alt="" class="featured-image">
+      <img src="{{- page.image | relative_url -}}" alt="{{- page.alt -}}" class="featured-image">
     {%- else -%}
       {%- assign postImage = "/assets/images/default.jpg" -%}
       <img src="{{- postImage | relative_url -}}" alt="" class="featured-image">

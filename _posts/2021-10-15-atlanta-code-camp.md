@@ -4,6 +4,7 @@ title: "Atlanta Code Camp"
 description: "A brief recap of the 2021 Atlanta Code Camp"
 tags: atlanta code camp
 image: /assets/images/acc.jpg
+alt: "classroom with people"
 ---
 *More people than I expected but safe and exciting.*
 
