@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Featured Images | TreetopCodes</title>
+
+<meta name="description" content="Joseph Henry Hargrove is a full stack Rails developer looking forward to learning something new today." />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+<link rel="stylesheet" href="/_bridgetown/static/index.4X3JYJXE.css" />
+<script src="/_bridgetown/static/index.VHAEF2NH.js" defer></script>
+<script type="module">let lastmod = 0
+function startReloadConnection() {
+  const evtSource = new EventSource("/_bridgetown/live_reload")
+  evtSource.onmessage = event => {
+    if (event.data == "reloaded!") {
+      location.reload()
+    } else {
+      const newmod = Number(event.data)
+      if (lastmod > 0 && newmod > 0 && lastmod < newmod) {
+        location.reload()
+      } else {
+        lastmod = newmod
+      }
+    }
+  }
+  evtSource.onerror = event => {
+    if (evtSource.readyState === 2) {
+      // reconnect with new object
+      evtSource.close()
+      console.warn("Live reload: attempting to reconnect in 3 seconds...")
+
+      setTimeout(() => startReloadConnection(), 3000)
+    }
+  }
+}
+setTimeout(() => {
+  startReloadConnection()
+}, 500)
+</script>
+
+  </head>
+  <body class="post ">
+    <div  class="w-full mx-0 fixed inset-x-0 top-0 h-auto flex-row bg-navcolor w-full block">
+<nav class="space-x-2">
+    <a class="text-darklink py-2 pl-4" href="/">Home</a>
+    <a class="text-darklink py-2" href="/about">About</a>
+    <a class="text-darklink py-2" href="/posts">Posts</a>
+</nav>
+</div>
+
+    <div class="block text-center">
+  <div class="h-20"></div>
+  <h1>My name is Joseph.</h1>
+  <img class="w-60 p-1 text-center mx-auto" src="https://res.cloudinary.com/dafocsz3k/image/upload/ar_1:1,b_rgb:707389,bo_5px_solid_rgb:000000,c_fill,g_auto,r_max,w_1000/v1668007665/muppet_uk24up.jpg">
+</div>
+
+    <main class="bg-navcolor">
+      <div id="image-credit" class="block pb-4">
+  <span class="text-xs italic float-right">*Preview photo by <a href="https://unsplash.com/@theycallmenomz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Noman Shahid</a> on <a href="https://unsplash.com/s/photos/pictures?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+</div>
+<h1>Featured Images</h1>
+
+<p><br />
+This week I’ve been avoiding the next step in my learning process. Let’s say I’m in the planning phase instead. I want to start #100daysofcode but I’m hemming and hawing over whether to start a project or dive back into FreeCodeCamp. While I figure that out I’ve been spending more time learning the ins and outs of Jekyll and GitHub pages, and I’m going to take a quick minute to share something I have learned. <br />
+<br />
+I have been looking for ways to give this site a glow-up without anything too complicated or distracting. Mostly I’ve been looking at adding some images here and there. I came across a great series of videos on YouTube by the very helpful Bill Raymond. <a href="https://www.youtube.com/watch?v=6oKO-7gsM4s&amp;t=642s">Two of them</a> outlined some pretty simple tricks to add feature images to the tops of the posts. (Like that one up there. ^) I found myself wondering how, using this method, I could add alt text to the featured images. As per usual, I was getting ahead of myself. It dawned on me that pretty much any image used in this way would be purely decorative and wouldn’t require any alt text. I’m kinda stubborn though and needed to figure this out anyway. <br />
+<br />
+Using Bill’s method I wound up adding an image attribute to my post’s front matter like so:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">/assets/images/foo.jpg</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p><br />
+…and a Liquid if else statement to the post’s layout page.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{%- if page.image -%}
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{- page.image | relative_url -}}"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"featured-image"</span><span class="nt">&gt;</span>
+{%- else -%}
+    {%- assign postImage = "/assets/images/bar.jpg" -%}
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{- postImage | relative_url -}}"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"featured-image"</span><span class="nt">&gt;</span>
+{%- endif -%}
+</code></pre></div></div>
+<p><br />
+This uses the previously assigned <strong>foo.jpg</strong> and allows for the default usage of <strong>bar.jpg</strong> when there is no image specified in the front matter. What I wanted to do was allow for the possible edge case where the feature image contained some pertinent or interesting content. This is where I got to learn about custom front matter. <br />
+<br />
+It was easy enough to add this:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">/assets/images/foo.jpg</span>
+<span class="na">alt</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Foo</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">good</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">you"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p><br />
+…and to make a quick adjustment to the layout page like so:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{%- if page.image -%}
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{- page.image | relative_url -}}"</span> <span class="na">alt=</span><span class="s">"{{- page.alt -}}"</span> <span class="na">class=</span><span class="s">"featured-image"</span><span class="nt">&gt;</span>
+{%- else -%}
+    {%- assign postImage = "/assets/images/bar.jpg" -%}
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{- postImage | relative_url -}}"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"featured-image"</span><span class="nt">&gt;</span>
+{%- endif -%}
+</code></pre></div></div>
+<p><br />
+Now I have the option to add alt text to a feature image. Bet I never use it. :wink:<br />
+<br /></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Holy crap guys. Turns out Jekyll gets kinda cranky if you try to put Liquid syntax inside a code block. I guess it renders a markdown page and converts all that Liquid to HTML before it looks at the markdown syntax and things just don’t work right. Michael Currin gives an explanation and a pretty good fix for this <a href="https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/jekyll/code-blocks/liquid-code.html">here</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Bonus: I learned how to footnote! <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+    </main>
+
+    <footer>
+  Contact me at <a class="text-lightlink" href="mailto:joseph@treetopcodes.com">joseph@treetopcodes.com</a>
+  <p class="py-2 text-xs">I built this awesome site with the help of <a class="text-lightlink" href="https://www.bridgetownrb.com/">bridgetownrb</a> and lots of folks on Twitter.</p>
+  <div class="footer-links">
+    <a id="ras" href="https://github.com/TreetopLover" target="_blank"><i class="fab fa-github fa-2x px-2 text-lightlink"></i></a>
+    <a id="ta" href="https://twitter.com/oldjoehenry" target="_blank"><i class="fab fa-twitter fa-2x px-2 text-lightlink"></i></a>
+    <a id="far-i" href="https://linkedin.com/in/joseph-hargrove-207b85227" target="_blank"><i class="fab fa-linkedin fa-2x px-2 text-lightlink"></i></a>
+  </div> 
+</footer>
+
+  </body>
+</html>
