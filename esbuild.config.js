@@ -26,6 +26,6 @@ const outputFolder = "output"
 // ```
 // const esbuildOptions = { publicPath: "/my_subfolder/_bridgetown/static" }
 // ```
-const esbuildOptions = { publicPath: "/bridgetown-gh-pages-demo/_bridgetown/static" }
+const esbuildOptions = { publicPath: "/treetoplover.github.io/_bridgetown/static" }
 
 build(outputFolder, esbuildOptions)
