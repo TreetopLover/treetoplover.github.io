@@ -6,7 +6,7 @@ date:
 description: "Just a friendly introduction to myself and my home on the web."
 categories: 
 published: true
-cloudinary_id: https://res.cloudinary.com/dafocsz3k/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1668007409/personal_k3i5hr.jpg
+cloudinary_id: https://res.cloudinary.com/dafocsz3k/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1668059412/davor-denkovski-Vi4WhEglLHo-unsplash_1_j7ddos.jpg
 image_alt: ""
 image_credit: "Davor Denkovski"
 image_credit_link: https://unsplash.com/photos/Vi4WhEglLHo
