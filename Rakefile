@@ -37,6 +37,12 @@ namespace :frontend do
     sh "yarn run esbuild-dev"
   rescue Interrupt
   end
+
+  desc "Build the Bridgetown site for deployment"
+  task :deploy => [:clean, "frontend:build"] do
+  ENV["BRIDGETOWN_ENV"] = "production"
+  Bridgetown::Commands::Build.start
+end
 end
 
 #

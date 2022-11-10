@@ -1,14 +1,20 @@
 ---
 layout: page
-title: Posts
+# title: Posts
 ---
 
 <ul>
-  {% for post in collections.posts.resources %}
+  <% collections.posts.resources.each do |post| %>
     <li>
-      <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
+      <%= render 'postcard', title: post.data.title, 
+                              description: post.data.description, 
+                              author: post.data.author, 
+                              date: post.data.date, 
+                              image: post.data.cloudinary_id, 
+                              link: post.relative_url, 
+                              image_alt: post.data.image_alt %>
     </li>
-  {% endfor %}
+  <% end %>
 </ul>
 
-If you have a lot of posts, you may want to consider adding [pagination](https://www.bridgetownrb.com/docs/content/pagination)!
+<!-- If you have a lot of posts, you may want to consider adding [pagination](https://www.bridgetownrb.com/docs/content/pagination)! -->

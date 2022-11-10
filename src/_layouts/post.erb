@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div id="image-credit" class="block pb-4">
+  <span class="text-xs italic float-right">*Preview photo by <a href="<%= resource.data.image_credit_link %>"><%= resource.data.image_credit %></a> on <a href="<%= resource.data.image_credit_source_link %>"><%= resource.data.image_credit_source %></a></span>
+</div>
+<h1><%= resource.data.title %></h1>
+
+<%= yield %>

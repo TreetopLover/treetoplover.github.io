@@ -4,8 +4,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: Treetop Codes
-tagline: internet things
-email: joseph@treetopcodes.com
+title: TreetopCodes
+tagline: A blog.
 description: >-
-  Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  Joseph Henry Hargrove is a full stack Rails developer looking forward to learning something new today.
+  
+domain: treetopcodes.com
+url: https://treetopcodes.com
+repo: treetoplover/treetoplover.github.io 
+email: joseph@treetopcodes.com
+hero: "https://res.cloudinary.com/dafocsz3k/image/upload/ar_1:1,b_rgb:707389,bo_5px_solid_rgb:000000,c_fill,g_auto,r_max,w_1000/v1668007665/muppet_uk24up.jpg"
+

@@ -1,8 +1,17 @@
 ---
 layout: post
+author: "Joseph Hargrove"
 title:  "Your First Post on Bridgetown"
-date:   2022-10-07 11:58:50 -0500
-categories: updates
+date:   2022-10-12 10:02:15 -0500
+categories: 
+published: false
+description: "Just a little blog post about some stuff."
+cloudinary_id: https://res.cloudinary.com/dafocsz3k/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1665612327/cld-sample-2.jpg
+image_alt: "Mountains"
+image_credit: ""
+image_credit_link: 
+image_credit_source: ""
+image_credit_source_link:
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `bridgetown serve`, which launches a web server and auto-regenerates your site when a file is updated.

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# This is my site
-
-Thanks for visiting
-=======
 # Bridgetown Website README
 
 Welcome to your new Bridgetown website! You can update this README file to provide additional context and setup information for yourself or other contributors.
@@ -73,4 +68,3 @@ If repo is on GitHub:
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
->>>>>>> 9bd489f (first commit)

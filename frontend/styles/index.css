@@ -8,10 +8,11 @@
 @tailwind utilities;
 
 :root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
+  --body-background: #707389;
+  --body-color: #3C3127;
   --heading-color: black;
-  --action-color: #d64045;
+  --light-link: #DA7638;
+  --dark-link: #B55522; 
 }
 
 body {
@@ -26,18 +27,38 @@ body {
 }
 
 a {
-  color: var(--action-color);
-  text-decoration: underline;
-  text-decoration-color: #ffb088;
+  /* color: var(--action-color); */
+  text-decoration: no-underline;
+  /* text-decoration-color: #ffb088; */
 }
 
 h1 {
   margin: 1rem 0 3rem;
   text-align: center;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 2.5rem;
   color: var(--heading-color);
   line-height: 1.2;
+} 
+
+h2 {
+  margin: 1rem 0 3rem;
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--heading-color);
+  line-height: 1.2;
+  display: block;
+  text-align: center;
+}
+
+h3 {
+  margin: 1rem 0 1.5rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  line-height: 1;
+  display: block;
+  text-align: center;
 }
 
 body > header {
@@ -69,10 +90,10 @@ body > nav a {
 main {
   margin: 2rem auto 4rem;
   max-width: 65rem;
-  min-height: calc(100vh - 200px);
+  min-height: auto; /* calc(100vh - 200px); */
   padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
+  /* background: #e2e8f0; */
+  box-shadow: 2px 3px 3px var(--body-color);
   border-radius: 3px;
 
   @media (max-width: 500px) {
@@ -80,14 +101,26 @@ main {
   }
 }
 
+#image-credit a {
+  color: var(--dark-link);
+}
+
 footer {
   text-align: center;
   margin-bottom: 4rem;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 hr {
   border: none;
-  border-top: 2px dotted #bbb;
+  border-top: 2px solid #bbb;
   margin: 3rem 0;
+}
+
+.footnotes {
+  font-size: .9rem;
+}
+
+.footnotes ol {
+  list-style-type: lower-roman;
 }
