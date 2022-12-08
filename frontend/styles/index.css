@@ -26,8 +26,13 @@ body {
   line-height: 1.5;
 }
 
+.highlight {
+  overflow-x: scroll;
+  background-color: antiquewhite;
+}
+
 a {
-  /* color: var(--action-color); */
+  color: var(--dark-link); 
   text-decoration: no-underline;
   /* text-decoration-color: #ffb088; */
 }
@@ -85,20 +90,21 @@ body > nav ul {
 
 body > nav a {
   text-decoration: none;
+  color: var(--dark-link);
 }
 
 main {
   margin: 2rem auto 4rem;
   max-width: 65rem;
-  min-height: auto; /* calc(100vh - 200px); */
-  padding: 25px 25px 50px;
+  min-height: auto;
+  /* padding: 25px 25px 50px; */
   /* background: #e2e8f0; */
   box-shadow: 2px 3px 3px var(--body-color);
   border-radius: 3px;
 
-  @media (max-width: 500px) {
+  /* @media screen and (max-width: 500px) {
     padding: 16px 16px 50px;
-  }
+  } */
 }
 
 #image-credit a {

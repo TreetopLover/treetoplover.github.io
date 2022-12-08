@@ -6,7 +6,7 @@
   <body class="<%= resource.data.layout %> <%= resource.data.page_class %>">
     <%= render "navbar", metadata: site.metadata, resource: resource %>
     <%= render "hero", image: site.metadata.hero %>
-    <main class="bg-navcolor">
+    <main class="bg-navcolor pt-4 px-4 pb-12 sm:pt-3 sm:px-3 justify-center">
       <%= yield %>
     </main>
 

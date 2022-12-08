@@ -5,7 +5,7 @@ layout: page
 
 <ul>
   <% collections.posts.resources.each do |post| %>
-    <li>
+    <li class="flex justify-center">
       <%= render 'postcard', title: post.data.title, 
                               description: post.data.description, 
                               author: post.data.author, 
