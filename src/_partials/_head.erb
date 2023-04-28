@@ -4,6 +4,11 @@
 <title><% if resource_title != "Index" %><%= resource_title %> | <%= metadata.title %><% else %><%= metadata.title %>: <%= metadata.tagline %><% end %></title>
 
 <meta name="description" content="<%= metadata.description %>" />
+<meta property="og:title" content="<%= resource.data.title %>%>" />
+<meta property="og:description" content="<%= resource.data.description %>" />
+<meta property="og:image" content="<%= resource.data.image %>" />
+<meta name="twitter:card"  content="<%= resource.data.image_alt >" />
+<meta name="twitter:site" content="@<%= site.metadata.twitter %>" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 <link rel="stylesheet" href="<%= webpack_path :css %>" />
 <script src="<%= webpack_path :js %>" defer></script>
