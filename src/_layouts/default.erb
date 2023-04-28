@@ -5,7 +5,11 @@
   </head>
   <body class="<%= resource.data.layout %> <%= resource.data.page_class %>">
     <%= render "navbar", metadata: site.metadata, resource: resource %>
-    <%= render "hero", image: site.metadata.hero %>
+    <% if resource.relative_url == "/about/" %>
+      <%= render "hero", image: resource.data.image %>
+    <% else %>
+      <%= render "hero", image: site.metadata.hero %>
+    <% end %>
     <main class="bg-navcolor pt-4 px-4 pb-12 sm:pt-3 sm:px-3 justify-center">
       <%= yield %>
     </main>
