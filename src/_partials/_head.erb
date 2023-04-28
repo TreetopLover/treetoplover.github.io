@@ -4,7 +4,7 @@
 <meta property="twitter:title" content="<%= resource.data.title %>%>" />
 <meta property="twitter:description" content="<%= resource.data.description %>" />
 <meta property="twitter:image" content="<%= resource.data.image %>" />
-<meta name="twitter:card"  content="sumary_large_image" />
+<meta name="twitter:card"  content="summary_large_image" />
 <meta name="twitter:site" content="@<%= site.metadata.twitter %>" />
 <% resource_title = strip_html(strip_newlines(title)) %>
 <title><% if resource_title != "Index" %><%= resource_title %> | <%= metadata.title %><% else %><%= metadata.title %>: <%= metadata.tagline %><% end %></title>
