@@ -6,7 +6,7 @@ date:   2023-04-25
 categories: 
 published: true
 description: "Our Hero tries to find his footing."
-cloudinary_id: https://res.cloudinary.com/dafocsz3k/image/upload/v1682698412/IMG_2096_c2ow09.jpg
+cloudinary_id: https://res.cloudinary.com/dafocsz3k/image/upload/c_scale,h_972/v1682735869/IMG_2105_y2qm4p.jpg
 card_image: https://res.cloudinary.com/dafocsz3k/image/upload/ar_2:1,c_lfill,h_250,w_500/v1682698412/IMG_2096_c2ow09.jpg
 image_alt: "Crowd of people at RailsConf 2023"
 image_credit: "Joseph Hargrove"
