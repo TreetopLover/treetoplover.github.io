@@ -3,6 +3,7 @@
   <head>
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
+  <%= render "analytics" %>
   <body class="<%= resource.data.layout %> <%= resource.data.page_class %>">
     <%= render "navbar", metadata: site.metadata, resource: resource %>
     <% if resource.relative_url == "/about/" %>
